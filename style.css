@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#home {
+    background: url('https://t4.ftcdn.net/jpg/02/97/12/13/360_F_297121362_XoF6yXKmG6J0j6g1ZjbYlS8UkHJ1ZRBw.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image scales to cover the section */
+    color: #f39c12; /* Orange text color */
+    height: 50vh; /* Ensures it covers the full height of the screen */
+}
+
+@media (max-width: 768px) {
+    #home {
+        background-position: center center; /* Keeps the background image centered */
+        background-size: cover; /* Ensures the image still scales properly on mobile */
+    }
+}
+
+.project-card a {
+    color: blue;
+}
+
+.project-card a:visited {
+    color: blue;
+}
+
+/* About Section */
+.section1 {
+    text-align: center;
+    padding: 30px;
+    margin: 40px 0;
+}
+
+.section1 p {
+    text-align: left;
+}
+
+/* Accomplishments Section - Updated Layout to match Project Cards */
+.accomplishments-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.accomplishment {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 100%; /* Full width by default */
+    box-sizing: border-box;
+}
+
+/* Hover effect to make the cards pop out slightly */
+.accomplishment:hover {
+    transform: scale(1.05);
+}
+
+.accomplishment img {
+    display: block;  /* Makes the image behave like a block element */
+    margin-left: auto;  /* Automatically adjusts left margin */
+    margin-right: auto;  /* Automatically adjusts right margin */
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+/* Accomplishment Text Style */
+.accomplishment-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Mobile View: Adjust Accomplishments for smaller screens */
+@media (max-width: 768px) {
+    .accomplishments-container {
+        justify-content: center;
+        padding: 10px;  /* Add some padding */
+    }
+
+    .accomplishment {
+        width: 90%;  /* Less padding and more space in each card */
+        margin-bottom: 20px;
+        text-align: left;  /* Align text to the left for better readability */
+    }
+
+    .accomplishment-text {
+        font-size: 14px;  /* Adjust text size for smaller screens */
+    }
+
+    .award-image {
+        max-width: 200px;  /* Adjust the size of images on mobile */
+    }
+}
+
+/* General Styles for Cards (Desktop View) */
+.accomplishment-section {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Mobile View Adjustments */
+@media only screen and (max-width: 768px) {
+    .accomplishment-section {
+        display: flex;
+        flex-direction: column;  /* Stacks the cards vertically */
+        align-items: flex-start; /* Aligns all cards to the start (left side) */
+        gap: 15px; /* Adds some space between the cards */
+    }
+
+    .accomplishment-card {
+        width: 100%;  /* Ensures cards take up full width */
+        margin-bottom: 15px;  /* Adds spacing between cards */
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1d1d1d;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Section */
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+#home {
+    background: url('https://t4.ftcdn.net/jpg/02/97/12/13/360_F_297121362_XoF6yXKmG6J0j6g1ZjbYlS8UkHJ1ZRBw.jpg') no-repeat center center/cover;
+    color: #f39c12;
+}
+
+#about, #projects, #contact {
+    background: #fff;
+    color: #333;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Contact Section */
+#contact {
+    background: #fff;
+    color: #333;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+    color: #f39c12;
+}
+
+.contact-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skill-button {
+    background-color: #009abc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.skill-button:hover {
+    background-color: #f39c12;
+}
+
+/* Scroll to Top Button */
+#top-arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1d1d1d;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+}
+
+#top-arrow:hover {
+    background: #f39c12;
+}
+
+#download-resume {
+    margin-top: 40px;
+    background-color: #f39c12;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#download-resume:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
