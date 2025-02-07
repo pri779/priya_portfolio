@@ -3,128 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-#home {
-    background: url('https://t4.ftcdn.net/jpg/02/97/12/13/360_F_297121362_XoF6yXKmG6J0j6g1ZjbYlS8UkHJ1ZRBw.jpg') no-repeat center center;
-    background-size: cover; /* Ensures the image scales to cover the section */
-    color: #f39c12; /* Orange text color */
-    height: 50vh; /* Ensures it covers the full height of the screen */
-}
-
-@media (max-width: 768px) {
-    #home {
-        background-position: center center; /* Keeps the background image centered */
-        background-size: cover; /* Ensures the image still scales properly on mobile */
-    }
-}
-
-.project-card a {
-    color: blue;
-}
-
-.project-card a:visited {
-    color: blue;
-}
-
-/* About Section */
-.section1 {
-    text-align: center;
-    padding: 30px;
-    margin: 40px 0;
-}
-
-.section1 p {
-    text-align: left;
-}
-
-/* Accomplishments Section - Updated Layout to match Project Cards */
-.accomplishments-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px 0;
-}
-
-.accomplishment {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    width: 100%; /* Full width by default */
-    box-sizing: border-box;
-}
-
-/* Hover effect to make the cards pop out slightly */
-.accomplishment:hover {
-    transform: scale(1.05);
-}
-
-.accomplishment img {
-    display: block;  /* Makes the image behave like a block element */
-    margin-left: auto;  /* Automatically adjusts left margin */
-    margin-right: auto;  /* Automatically adjusts right margin */
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-
-/* Accomplishment Text Style */
-.accomplishment-text {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 15px;
-    font-size: 16px;
-}
-
-/* Mobile View: Adjust Accomplishments for smaller screens */
-@media (max-width: 768px) {
-    .accomplishments-container {
-        justify-content: center;
-        padding: 10px;  /* Add some padding */
-    }
-
-    .accomplishment {
-        width: 90%;  /* Less padding and more space in each card */
-        margin-bottom: 20px;
-        text-align: left;  /* Align text to the left for better readability */
-    }
-
-    .accomplishment-text {
-        font-size: 14px;  /* Adjust text size for smaller screens */
-    }
-
-    .award-image {
-        max-width: 200px;  /* Adjust the size of images on mobile */
-    }
-}
-
-/* General Styles for Cards (Desktop View) */
-.accomplishment-section {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* Mobile View Adjustments */
-@media only screen and (max-width: 768px) {
-    .accomplishment-section {
-        display: flex;
-        flex-direction: column;  /* Stacks the cards vertically */
-        align-items: flex-start; /* Aligns all cards to the start (left side) */
-        gap: 15px; /* Adds some space between the cards */
-    }
-
-    .accomplishment-card {
-        width: 100%;  /* Ensures cards take up full width */
-        margin-bottom: 15px;  /* Adds spacing between cards */
-    }
-}
 
 body {
     font-family: 'Arial', sans-serif;
@@ -132,7 +10,21 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+#home h1 {
+    font-size: 24px; /* Adjust this value to make the font smaller */
+    color: #f39c12;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+#home p {
+    font-size: 14px; /* If there's any paragraph text, you can also reduce its size here */
+    color: #fff;
+}
+
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -191,11 +83,26 @@ nav ul li a:hover {
 #home {
     background: url('https://t4.ftcdn.net/jpg/02/97/12/13/360_F_297121362_XoF6yXKmG6J0j6g1ZjbYlS8UkHJ1ZRBw.jpg') no-repeat center center/cover;
     color: #f39c12;
+    height: 50vh;
 }
 
-#about, #projects, #contact {
-    background: #fff;
+/* About, Accomplishment, Contact Sections - White Background */
+#about, #accomplishments, #contact {
+    background: #ffffff;
     color: #333;
+    padding-top: 100px; /* Prevents header overlap */
+}
+
+/* Skills and Projects Sections - #e4e9ec Background Color */
+#skills, #projects {
+    background: #f7f9fa;
+    color: #333;
+    padding-top: 100px; /* Prevents header overlap */
+}
+
+/* Adding padding to the top of each section to prevent overlap with the fixed header */
+#about, #projects, #contact {
+    padding-top: 100px; /* Add enough padding so that the header doesn't cover the section title */
 }
 
 h1 {
@@ -206,14 +113,25 @@ h1 {
 h2 {
     margin-bottom: 20px;
     color: black;
+text-align: center;
+}
+h3{ font-size:18px;
+text-align:center}
+/* Contact Section */
+#about {
+    background: #fff;
+    color: #333;
+    padding: 70px 20px;
+    text-align: left;
 }
 
 /* Contact Section */
 #contact {
     background: #fff;
     color: #333;
-    padding: 50px 20px;
+    padding: 70px 20px;
     text-align: center;
+    font-size: 16px;
 }
 
 .contact-info {
@@ -229,7 +147,7 @@ h2 {
     align-items: center;
     text-decoration: none;
     color: #333;
-    font-size: 18px;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 
@@ -243,43 +161,21 @@ h2 {
     object-fit: contain;
 }
 
-/* Projects Section */
-.projects-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.project-card {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: scale(1.1);
-}
-
-.project-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
 /* Skills Section */
 .skills-container {
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+
 }
 
+/* Accomplishments Section */
+#accomplishments h2 {
+    margin-bottom: 2px;  /* Reduce margin to decrease the gap */
+    color: black;
+    text-align: center;
+}
 .skill-button {
     background-color: #009abc;
     color: #fff;
@@ -356,3 +252,320 @@ h2 {
         display: block;
     }
 }
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between the cards */
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+.child {
+    background: white;
+    padding: 20px;
+    width: 350px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.child:hover {
+    transform: translateY(-10px);
+}
+
+/* Hide Overflow */
+.card-container {
+    max-width: 920px;
+    overflow: hidden;
+}
+
+/* Ensure Horizontal Scrolling for Mobile */
+@media (max-width: 768px) {
+    .card-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .child {
+        width: 220px;
+    }
+}
+
+
+
+/* Prevents Images from Overflowing */
+.child img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+/* Scrollable Section for Images */
+.scroll-images {
+    position: relative;
+    width: 100%;
+    padding: 50px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 10%);
+}
+
+.child img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+
+    background: #03A9F4;
+}
+
+.scroll-images::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scroll-images::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.cover {
+    position: relative;
+    padding: 1px 30px;
+    margin-top: 100px;
+}
+
+.left, .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius:50px;
+      border: 2px solid #f39c12;
+    color: white;
+    padding: 10px;
+
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    font-size: 30px;
+}
+
+.left, .right {
+    width: 40px;
+    height: 40px;
+
+}
+
+.left {
+    left: -10px;
+}
+
+.right {
+    right: -20px;
+}
+
+
+
+.scroll-images {
+    position: relative;
+    width: 100%;
+    padding: 50px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.child {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px;
+    min-width: 300px;
+    max-width: 300px;
+    height:400px;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 10%);
+}
+
+.child img {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+ 
+    background: #03A9F4;
+}
+
+
+.scroll-images::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scroll-images::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.left:hover, .right:hover {
+    background-color: #f39c12;
+    transition: background-color 0.3s;
+}
+
+
+/* Common Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.left p, .right p {
+    font-size: 24px;
+    color: black; /* Ensures the arrow appears in black */
+    font-weight: bold;
+    margin: 0;
+}
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}   
+/* Child Container Styling */
+.child {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    height:500px; /* Fixed card height for uniformity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s;
+}
+
+.child:hover {
+    transform: translateY(-5px);
+}
+
+
+
+.child h3 {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: left;
+    min-height: 50px; /* Fixed height for headings */
+    margin-bottom: 10px;
+}
+
+.child p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.child a {
+    display: block;
+    margin-top: auto;
+    padding: 8px 16px;
+    background-color: #f39c12;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.child a:hover {
+    background-color: #d68910;
+}
+
+
+  /* Flexbox for horizontal alignment */
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .contact-item {
+    text-decoration: none;
+  }
+
+  .contact-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+ .phone-section p {
+    margin-top: 0.5rem;
+  }
+
+  .phone-link {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .phone-link:hover {
+    text-decoration: underline;
+  }
